@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      //函数的柯里化：通过函数调用继续返回函数的形式，实现多次接收参数最后统一处理的函数编码形式。
+      function sum(a) {
+        return function (b) {
+          return function (c) {
+            return a+b+c
+          }
+        }
+      }
+      console.log(sum(1)(2)(3))
+    </script>
+  </body>
+</html>
